@@ -2,12 +2,13 @@
 
 public class Policy
 {
-    public string Id { get; set; }
-    public string PolicyNumber { get; set; }
-    public string CarPlateNumber { get; set; }
+    public required string Id { get; set; }
+    public required string PolicyNumber { get; set; }
+    public required string CarPlateNumber { get; set; }
     public DateTime EffectiveDate { get; set; }
-    public decimal ExpirationDate {  get; set; }
+    public DateTime ExpirationDate {  get; set; }
+    public decimal Premium { get; set; }
     public PolicyStatus Status { get; set; } 
-    public Insured Insured { get; set; }
+    public required Insured Insured { get; set; }
 
  }

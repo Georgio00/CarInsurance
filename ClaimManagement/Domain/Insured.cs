@@ -1,4 +1,4 @@
-﻿namespace PolicyManagment.Domain;
+﻿namespace ClaimManagement.Domain;
 
 public class Insured
 {

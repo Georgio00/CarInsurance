@@ -17,7 +17,7 @@ public class PoliciesController : ControllerBase
     }
 
 
-    [HttpPost]
+    [HttpPost]  
     public async Task<IActionResult> CreatePolicy([FromBody] Policy policy)
     {
         await _repository.AddAsync(policy);//save to Mongodb
@@ -35,6 +35,14 @@ public class PoliciesController : ControllerBase
 
         return Ok(policy);
     }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAllPolicies()
+    {
+        var policies = await _repository.GetAllAsync();
+        return Ok(policies);
+    }
+
 
     [HttpPut("{id}")]
 

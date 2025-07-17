@@ -1,0 +1,53 @@
+POST http://localhost:5097/api/policies
+Content-Type: application/json
+
+{
+  "id": "1",
+  "policyNumber": "POL_00",
+  "carPlateNumber": "ABC322",
+  "effectiveDate": "2025-07-03T00:00:00",
+  "expirationDate": "2026-07-01T00:00:00",
+  "premium": 1200.6,
+  "status": "active",     
+  "insured": {
+    "id": "ins-1",
+    "firstName": "Ali",
+    "lastName": "Kassem",
+    "email": "alikassem@gmail.com",
+    "phoneNumber": "96112345678"
+  }
+}
+###
+GET http://localhost:5097/api/policies //get all policies 
+Accept:application/json
+
+
+###
+GET http://localhost:5097/api/policies/1  //get by id
+Accept: application/json
+
+###
+PUT http://localhost:5097/api/policies/1
+Content-Type: application/json
+{
+    "id":"1",
+    "policyNumber": "POL_00",
+    "carPlateNumber":"ABC322",
+    "effectiveDate":"2025-07-03",
+    "expirationDate":"2026-07-01",
+    "premium":1450.6,
+    "status":"Active",
+    "insured":{
+        "id":"ins-1",
+        "firstName":"Ali",
+        "lastName":"Kassem",
+        "email":"alikassem@gmail.com",
+        "phoneNumber":"96112345678"
+    }
+}
+
+###
+DELETE  http://localhost:5097/api/policies/1
+Accept:application/json
+
+
